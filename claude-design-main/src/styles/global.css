@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Zodiak";
+  src: url("/fonts/Zodiak-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Zodiak";
+  src: url("/fonts/Zodiak-VariableItalic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/Switzer-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-serif: "Zodiak", ui-serif, Georgia, serif;
+  --font-sans: "Switzer", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #141414;
+  --color-charcoal: #2a2a2a;
+  --color-line: #3a3a3a;
+  --color-crema: #c8894a;
+  --color-caramel: #dda463;
+  --color-cream: #f4ece1;
+  --color-roast: #6b4226;
+  --color-bean: #3e2616;
+  --color-paper: #fffaf3;
+  --color-sand: #e6d9c7;
+  --color-oat: #efe3d2;
+  --color-muted: #bfb4a6;
+  --color-soft: #d9cfc2;
+  --color-mocha: #5a4636;
+  --color-mocha-deep: #6b5848;
+  --color-line-strong: #4a4a4a;
+  --color-cream-dim: #e6dccf;
+  --color-hairline: #d8c7b1;
+
+  /* Movimiento: desaceleración natural, sin rebotes */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-quick: cubic-bezier(0.4, 0, 1, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    interpolate-size: allow-keywords;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  html {
+    scrollbar-color: var(--color-line-strong) var(--color-ink);
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    @apply bg-ink font-sans text-cream;
+    caret-color: var(--color-crema);
+  }
+
+  ::selection {
+    background: var(--color-crema);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-caramel);
+    outline-offset: 3px;
+  }
+
+  input::placeholder {
+    color: #bfa58a;
+  }
+}
+
+/* Contenedor centrado con gutter fluido */
+@utility container-page {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 48px);
+}
+
+/* Espaciado vertical estándar de sección */
+@utility section-y {
+  padding-block: clamp(64px, 8vw, 112px);
+}
+
+@utility heading-2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(36px, 4.4vw, 58px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+@utility btn-primary {
+  display: inline-block;
+  border-radius: 9999px;
+  background: var(--color-crema);
+  color: var(--color-ink);
+  font-weight: 600;
+  transition:
+    background-color 150ms,
+    transform 160ms var(--ease-out-expo);
+  &:hover {
+    background: var(--color-caramel);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    &:active {
+      transform: scale(0.97);
+      transition-duration: 150ms, 60ms;
+    }
+  }
+}
+
+/* Feedback táctil para controles secundarios (ghost, pills, tabs) */
+@utility press {
+  @media (prefers-reduced-motion: no-preference) {
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+}
+
+/* Subrayado que se dibuja de izquierda a derecha al pasar el cursor */
+@utility link-draw {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  padding-bottom: 2px;
+  transition:
+    color 150ms,
+    background-size 320ms var(--ease-out-expo);
+  &:hover,
+  &:focus-visible {
+    background-size: 100% 1px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    transition: color 150ms;
+  }
+}
+
+/* Acordeón: el contenido de <details> se despliega en altura */
+@utility details-motion {
+  &::details-content {
+    block-size: 0;
+    overflow-y: clip;
+    opacity: 0;
+    transition:
+      block-size 240ms var(--ease-in-quick),
+      opacity 160ms,
+      content-visibility 240ms allow-discrete;
+  }
+  &[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+    transition:
+      block-size 380ms var(--ease-out-expo),
+      opacity 280ms 60ms,
+      content-visibility 380ms allow-discrete;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &::details-content,
+    &[open]::details-content {
+      block-size: auto;
+      transition:
+        opacity 200ms,
+        content-visibility 200ms allow-discrete;
+    }
+  }
+}

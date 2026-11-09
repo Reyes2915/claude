@@ -1,0 +1,54 @@
+---
+import ImageSlot from './ImageSlot.astro';
+import type { Product } from '../types';
+import { roastLabel, roastPercent } from '../utils/format';
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+---
+
+<article class="group flex flex-col overflow-hidden rounded-[22px] border border-sand bg-paper transition-colors duration-300 hover:border-hairline">
+  <div class="relative aspect-4/3 bg-bean">
+    <ImageSlot
+      src={product.image}
+      alt={`Bolsa de ${product.name}`}
+      placeholder="Foto de la bolsa"
+      class="transition-transform duration-700 ease-out-expo motion-safe:group-hover:scale-[1.04]"
+    />
+    <span class="absolute top-3.5 left-3.5 rounded-full bg-ink px-3 py-1.5 text-xs tracking-[.06em] text-cream">
+      {product.origin}
+    </span>
+  </div>
+  <div class="flex flex-1 flex-col gap-4 px-6 pt-6 pb-[26px]">
+    <div class="flex flex-col gap-2">
+      <h3 class="m-0 font-serif text-[28px] leading-[1.05] font-medium tracking-[-.015em]">{product.name}</h3>
+      <span class="text-sm text-mocha tabular-nums">{product.process}</span>
+    </div>
+    <ul class="m-0 flex list-none flex-wrap gap-2 p-0" aria-label="Notas de cata">
+      {product.notes.map((note) => <li class="rounded-full bg-oat px-3 py-[5px] text-[13px] text-bean">{note}</li>)}
+    </ul>
+    <div class="flex flex-col gap-2">
+      <div class="flex justify-between text-[13px] text-mocha">
+        <span>Tostado</span>
+        <span class="font-semibold text-bean">{roastLabel(product.roast)}</span>
+      </div>
+      <div class="h-1.5 overflow-hidden rounded-full bg-sand">
+        <div
+          class="h-full rounded-full bg-linear-to-r from-caramel to-roast"
+          style={{ width: roastPercent(product.roast) }}
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mt-auto flex items-center justify-between gap-3 pt-2">
+      <div class="flex flex-col">
+        <span class="font-serif text-[28px] leading-none font-medium tracking-[-.01em] text-bean tabular-nums">${product.price} <span class="font-sans text-sm font-normal tracking-normal text-mocha">USD</span></span>
+        <span class="mt-1.5 text-xs text-mocha-deep">Bolsa de 12 oz</span>
+      </div>
+      <a href="#visitanos" class="btn-primary px-[22px] py-[13px] text-[15px]">Lo quiero</a>
+    </div>
+  </div>
+</article>

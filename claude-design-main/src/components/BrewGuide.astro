@@ -1,0 +1,76 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { brewMethods } from '../config/content';
+
+const slug = (name: string) => `brew-${name.toLowerCase().replace(/\s+/g, '-')}`;
+---
+
+<section id="preparacion" class="bg-cream text-ink" data-brew-guide>
+  <div class="container-page section-y flex flex-col gap-[clamp(32px,4vw,48px)]">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <SectionHeader title="Prepáralo como en la barra" />
+      <div class="relative flex max-w-full gap-1 overflow-x-auto rounded-full bg-[#e9dccb] p-1.5 [scrollbar-width:none]" role="tablist" aria-label="Métodos">
+        <span
+          class="pointer-events-none absolute top-1.5 bottom-1.5 left-0 w-0 rounded-full bg-bean opacity-0 transition-[transform,width] duration-[420ms] ease-out-expo in-data-enhanced:opacity-100"
+          aria-hidden="true"
+          data-tab-indicator
+        ></span>
+        {
+          brewMethods.map((method, i) => (
+            <button
+              type="button"
+              role="tab"
+              id={`${slug(method.name)}-tab`}
+              aria-controls={slug(method.name)}
+              aria-selected={i === 0 ? 'true' : 'false'}
+              tabindex={i === 0 ? 0 : -1}
+              class="press relative shrink-0 cursor-pointer rounded-full border-0 bg-transparent px-[clamp(14px,2vw,20px)] py-[11px] text-[15px] font-medium text-bean transition-[color,background-color,transform] duration-300 ease-out-expo hover:bg-bean/8 active:duration-75 aria-selected:bg-bean aria-selected:text-cream [[data-enhanced]_&[aria-selected=true]]:bg-transparent"
+            >
+              {method.name}
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    {
+      brewMethods.map((method, i) => (
+        <div
+          role="tabpanel"
+          id={slug(method.name)}
+          aria-labelledby={`${slug(method.name)}-tab`}
+          hidden={i !== 0}
+          class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] gap-[clamp(24px,4vw,56px)] rounded-[28px] border border-sand bg-paper p-[clamp(24px,4vw,48px)]"
+        >
+          <div class="flex flex-col gap-6">
+            <h3 class="m-0 font-serif text-[clamp(30px,3vw,40px)] leading-none font-medium tracking-[-.015em]">{method.name}</h3>
+            <p class="m-0 text-base leading-[1.65] text-pretty text-mocha">{method.description}</p>
+            <dl class="m-0 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-sand bg-sand">
+              {method.specs.map(([label, value]) => (
+                <div class="flex flex-col gap-1 bg-paper px-[18px] py-4">
+                  <dt class="text-xs font-medium tracking-[.1em] text-mocha-deep uppercase">{label}</dt>
+                  <dd class="m-0 text-lg font-semibold text-bean tabular-nums">{value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <ol class="m-0 flex list-none flex-col gap-[18px] self-center p-0">
+            {method.steps.map((step, n) => (
+              <li class="grid grid-cols-[40px_1fr] items-start gap-3.5">
+                <span class="flex size-8 items-center justify-center rounded-full bg-bean text-sm font-semibold text-cream tabular-nums">
+                  {n + 1}
+                </span>
+                <span class="pt-1 text-base leading-relaxed text-bean">{step}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  import { initTabs } from '../scripts/tabs';
+  initTabs('[data-brew-guide]');
+</script>

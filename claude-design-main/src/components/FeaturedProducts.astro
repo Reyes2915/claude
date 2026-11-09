@@ -1,0 +1,22 @@
+---
+import ProductCard from './ProductCard.astro';
+import SectionHeader from './SectionHeader.astro';
+import { products } from '../config/content';
+import { landing } from '../config/site';
+
+const featured = products.slice(0, landing.productCount);
+---
+
+<section id="cafes" class="bg-cream text-ink">
+  <div class="container-page section-y">
+    <div class="mb-[clamp(36px,4vw,56px)] flex flex-wrap items-end justify-between gap-6">
+      <SectionHeader title="Nuestros cafés destacados" />
+      <p class="m-0 max-w-[30ch] text-base leading-relaxed text-pretty text-mocha">
+        Todos disponibles en grano o molidos para tu método. Bolsas de 12 oz.
+      </p>
+    </div>
+    <div class="grid grid-cols-[repeat(auto-fill,minmax(min(100%,300px),1fr))] gap-[clamp(20px,2.5vw,32px)]">
+      {featured.map((product) => <ProductCard product={product} />)}
+    </div>
+  </div>
+</section>

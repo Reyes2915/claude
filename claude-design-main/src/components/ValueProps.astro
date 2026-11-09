@@ -1,0 +1,18 @@
+---
+import { valueProps } from '../config/content';
+---
+
+<section class="border-y border-charcoal" aria-label="Propuesta de valor">
+  <div
+    class="container-page grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-x-[clamp(28px,4vw,48px)] gap-y-8 py-[clamp(40px,5vw,64px)]"
+  >
+    {
+      valueProps.map((item) => (
+        <div class="flex flex-col gap-2 border-l border-charcoal pl-5">
+          <h3 class="m-0 font-serif text-[22px] leading-tight font-medium text-cream">{item.title}</h3>
+          <p class="m-0 text-[15px] leading-relaxed text-muted">{item.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

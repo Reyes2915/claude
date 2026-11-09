@@ -1,0 +1,53 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { reviews } from '../config/content';
+---
+
+<section class="bg-ink" aria-label="Reseñas">
+  <div class="container-page section-y flex flex-col gap-[clamp(36px,4vw,56px)]">
+    <SectionHeader title="Lo que dicen en su primera taza" />
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] gap-[clamp(20px,2.5vw,32px)]">
+      {
+        reviews.map((review, i) => (
+          <figure class="review-card m-0 flex flex-col gap-6 rounded-[22px] bg-charcoal p-8" style={`--i:${i}`}>
+            <blockquote class="m-0 font-serif text-[22px] leading-[1.4] tracking-[-.005em] text-pretty text-cream">
+              “{review.quote}”
+            </blockquote>
+            <figcaption class="mt-auto flex flex-col gap-0.5 border-t border-line pt-5 text-sm">
+              <strong class="font-semibold text-cream">{review.name}</strong>
+              <span class="text-muted">{review.meta}</span>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes review-rise {
+    from { opacity: 0; transform: translateY(52px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes review-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .review-card {
+        animation: review-rise linear both;
+        animation-timeline: view();
+        animation-range: entry calc(var(--i) * 6%) entry calc(70% + var(--i) * 6%);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .review-card {
+        animation: review-fade linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 80%;
+      }
+    }
+  }
+</style>

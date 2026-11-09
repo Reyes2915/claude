@@ -1,0 +1,48 @@
+---
+import Logo from './Logo.astro';
+import { footerColumns, legalLinks, paymentMethods, site } from '../config/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-charcoal bg-ink">
+  <div class="container-page flex flex-col gap-12 pt-[clamp(56px,6vw,80px)] pb-8">
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] gap-10">
+      <div class="flex min-w-[220px] flex-col gap-4">
+        <Logo />
+        <p class="m-0 max-w-[22em] text-[15px] leading-relaxed text-muted">{site.description}</p>
+      </div>
+      {
+        footerColumns.map((column) => (
+          <nav class="flex flex-col gap-3 text-[15px]" aria-label={column.title}>
+            <span class="text-xs font-medium tracking-[.1em] text-muted uppercase">{column.title}</span>
+            {column.links.map((link) => (
+              <a href={link.href} class="link-draw self-start text-soft hover:text-cream">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        ))
+      }
+    </div>
+    <div class="flex flex-wrap items-center justify-between gap-5 border-t border-charcoal pt-7">
+      <div class="flex flex-wrap gap-5 text-[13px] text-muted">
+        <span>© {year} {site.name}</span>
+        {
+          legalLinks.map((link) => (
+            <a href={link.href} class="text-muted transition-colors hover:text-cream">
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+      <ul class="m-0 flex list-none flex-wrap gap-2 p-0" aria-label="Métodos de pago">
+        {
+          paymentMethods.map((method) => (
+            <li class="rounded-md border border-line px-2.5 py-1.5 text-xs font-semibold text-soft">{method}</li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

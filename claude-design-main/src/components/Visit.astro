@@ -1,0 +1,73 @@
+---
+import { site } from '../config/site';
+import { directionsUrl, mapEmbedUrl } from '../utils/maps';
+
+const details = [
+  { label: 'Dirección', lines: [site.address] },
+  { label: 'Horario', lines: site.hours },
+  { label: 'Contacto', lines: [site.phone, site.email] },
+];
+---
+
+<section id="visitanos" class="bg-charcoal">
+  <div
+    class="container-page section-y grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-stretch gap-[clamp(32px,5vw,64px)]"
+  >
+    <div class="flex flex-col gap-7">
+      <div class="flex flex-col gap-5">
+        <h2 class="heading-2">Ven a oler el tueste</h2>
+        <p class="m-0 max-w-[32em] text-[17px] leading-relaxed text-pretty text-soft">
+          Nuestra barra y tostador están abiertos al público. Pide una cata o
+          llévate tu bolsa recién salida.
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-6 border-t border-line pt-6"
+      >
+        {
+          details.map((item) => (
+            <div class="flex flex-col gap-1.5">
+              <span class="text-xs font-medium tracking-[.1em] text-muted uppercase">
+                {item.label}
+              </span>
+              <span class="text-base leading-[1.55]">
+                {item.lines.map((line, i) => (
+                  <>
+                    {i > 0 && <br />}
+                    {line}
+                  </>
+                ))}
+              </span>
+            </div>
+          ))
+        }
+      </div>
+      <div class="flex flex-wrap gap-3.5">
+        <a
+          href={directionsUrl(site.address)}
+          target="_blank"
+          rel="noopener"
+          class="btn-primary px-[26px] py-[15px] text-base"
+        >
+          Cómo llegar
+        </a>
+        <a
+          href={site.phoneHref}
+          class="press rounded-full border border-line-strong px-[26px] py-[15px] text-base font-medium text-cream transition-[border-color,transform] duration-200 ease-out-expo hover:border-crema active:duration-75"
+        >
+          Llamar
+        </a>
+      </div>
+    </div>
+    <div
+      class="relative min-h-[420px] overflow-hidden rounded-[28px] border border-line bg-ink"
+    >
+      <iframe
+        title="Mapa de la tienda"
+        src={mapEmbedUrl(site.address)}
+        loading="lazy"
+        class="absolute inset-0 size-full border-0 grayscale-[.85] sepia-[.25] contrast-[1.05]"
+      ></iframe>
+    </div>
+  </div>
+</section>

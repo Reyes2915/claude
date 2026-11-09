@@ -1,0 +1,40 @@
+---
+import ImageSlot from './ImageSlot.astro';
+---
+
+<section id="origen" class="bg-bean">
+  <div
+    class="container-page section-y grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-center gap-[clamp(40px,6vw,80px)]"
+  >
+    <div class="grid h-[clamp(380px,46vw,560px)] min-w-0 grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-4">
+      <div class="relative min-w-0 overflow-hidden rounded-3xl">
+        <ImageSlot placeholder="Foto de la finca o del productor" class="bg-roast/40" />
+      </div>
+      <div class="grid min-h-0 min-w-0 grid-rows-2 gap-4">
+        <div class="relative min-h-0 overflow-hidden rounded-3xl">
+          <ImageSlot placeholder="Tostador" />
+        </div>
+        <div class="relative min-h-0 overflow-hidden rounded-3xl">
+          <ImageSlot placeholder="Granos verdes" />
+        </div>
+      </div>
+    </div>
+    <div class="flex min-w-0 flex-col gap-6">
+      <h2 class="heading-2 mb-2 max-w-[12em]">De la finca a tu taza, sin atajos</h2>
+      <p class="m-0 text-[17px] leading-[1.7] max-w-[34em] text-pretty text-cream-dim">
+        Empezamos con un tostador de cinco kilos y la obsesión de entender cada grano. Hoy visitamos
+        las fincas, catamos cada lote y lo tostamos a mano para resaltar lo que su tierra le dio.
+      </p>
+      <p class="m-0 text-[17px] leading-[1.7] max-w-[34em] text-pretty text-cream-dim">
+        Trabajamos con pocos productores, durante muchos años, para que cada cosecha sea mejor que la
+        anterior.
+      </p>
+      <blockquote
+        class="mx-0 mt-4 mb-0 border-t border-roast pt-7 font-serif text-[clamp(22px,2vw,26px)] leading-[1.35] font-light tracking-[-.01em] text-cream italic"
+      >
+        “Un buen tueste no le agrega nada al café: solo deja que hable.”
+        <span class="mt-4 block font-sans text-sm font-normal tracking-normal text-caramel not-italic">— Maestro tostador</span>
+      </blockquote>
+    </div>
+  </div>
+</section>

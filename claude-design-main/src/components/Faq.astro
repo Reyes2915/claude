@@ -1,0 +1,44 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { faqs } from '../config/content';
+import { site } from '../config/site';
+---
+
+<section id="faq" class="bg-cream text-ink">
+  <div
+    class="container-page section-y grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-start gap-[clamp(32px,5vw,72px)]"
+  >
+    <div class="flex flex-col gap-5">
+      <SectionHeader title="Todo sobre tu pedido" />
+      <p class="m-0 text-base leading-relaxed text-mocha">
+        ¿Otra duda? Escríbenos a{' '}
+        <a
+          href={`mailto:${site.email}`}
+          class="font-semibold text-bean underline decoration-roast/50 underline-offset-4 transition-colors hover:text-roast hover:decoration-roast"
+        >
+          {site.email}
+        </a>
+      </p>
+    </div>
+    <div class="flex flex-col border-t border-hairline">
+      {
+        faqs.map((faq, i) => (
+          <details name="faq" open={i === 0} class="details-motion group border-b border-hairline">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-[22px] text-lg font-semibold text-ink transition-colors hover:text-roast [&::-webkit-details-marker]:hidden">
+              <span>{faq.question}</span>
+              <span
+                class="flex size-8 flex-none items-center justify-center rounded-full border border-bean text-bean transition-colors duration-300 group-open:bg-bean group-open:text-cream"
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 12 12" class="size-3 transition-transform duration-[380ms] ease-out-expo group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <path d="M6 1v10M1 6h10" />
+                </svg>
+              </span>
+            </summary>
+            <p class="m-0 pr-12 pb-6 text-base leading-[1.65] text-mocha">{faq.answer}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

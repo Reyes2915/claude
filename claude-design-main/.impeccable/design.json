@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T15:53:01.513431+00:00",
+  "title": "Design System: Crema & Nogal",
+  "extensions": {
+    "colorMeta": {
+      "crema": {
+        "role": "primary",
+        "displayName": "Crema Amber",
+        "canonical": "oklch(68.1% 0.111 64.0)",
+        "tonalRamp": [
+          "oklch(15% 0.111 64.0)",
+          "oklch(26% 0.111 64.0)",
+          "oklch(37% 0.111 64.0)",
+          "oklch(48% 0.111 64.0)",
+          "oklch(60% 0.111 64.0)",
+          "oklch(72% 0.111 64.0)",
+          "oklch(84% 0.111 64.0)",
+          "oklch(95% 0.111 64.0)"
+        ]
+      },
+      "caramel": {
+        "role": "primary",
+        "displayName": "Toasted Caramel",
+        "canonical": "oklch(75.9% 0.106 68.7)",
+        "tonalRamp": [
+          "oklch(15% 0.106 68.7)",
+          "oklch(26% 0.106 68.7)",
+          "oklch(37% 0.106 68.7)",
+          "oklch(48% 0.106 68.7)",
+          "oklch(60% 0.106 68.7)",
+          "oklch(72% 0.106 68.7)",
+          "oklch(84% 0.106 68.7)",
+          "oklch(95% 0.106 68.7)"
+        ]
+      },
+      "roast": {
+        "role": "secondary",
+        "displayName": "Medium Roast",
+        "canonical": "oklch(42.1% 0.070 53.9)",
+        "tonalRamp": [
+          "oklch(15% 0.070 53.9)",
+          "oklch(26% 0.070 53.9)",
+          "oklch(37% 0.070 53.9)",
+          "oklch(48% 0.070 53.9)",
+          "oklch(60% 0.070 53.9)",
+          "oklch(72% 0.070 53.9)",
+          "oklch(84% 0.070 53.9)",
+          "oklch(95% 0.070 53.9)"
+        ]
+      },
+      "bean": {
+        "role": "secondary",
+        "displayName": "Dark Bean",
+        "canonical": "oklch(29.5% 0.045 53.8)",
+        "tonalRamp": [
+          "oklch(15% 0.045 53.8)",
+          "oklch(26% 0.045 53.8)",
+          "oklch(37% 0.045 53.8)",
+          "oklch(48% 0.045 53.8)",
+          "oklch(60% 0.045 53.8)",
+          "oklch(72% 0.045 53.8)",
+          "oklch(84% 0.045 53.8)",
+          "oklch(95% 0.045 53.8)"
+        ]
+      },
+      "mocha": {
+        "role": "neutral",
+        "displayName": "Cocoa",
+        "canonical": "oklch(41.1% 0.037 60.1)",
+        "tonalRamp": [
+          "oklch(15% 0.037 60.1)",
+          "oklch(26% 0.037 60.1)",
+          "oklch(37% 0.037 60.1)",
+          "oklch(48% 0.037 60.1)",
+          "oklch(60% 0.037 60.1)",
+          "oklch(72% 0.037 60.1)",
+          "oklch(84% 0.037 60.1)",
+          "oklch(95% 0.037 60.1)"
+        ]
+      },
+      "mocha-deep": {
+        "role": "neutral",
+        "displayName": "Deep Cocoa",
+        "canonical": "oklch(47.5% 0.035 61.9)",
+        "tonalRamp": [
+          "oklch(15% 0.035 61.9)",
+          "oklch(26% 0.035 61.9)",
+          "oklch(37% 0.035 61.9)",
+          "oklch(48% 0.035 61.9)",
+          "oklch(60% 0.035 61.9)",
+          "oklch(72% 0.035 61.9)",
+          "oklch(84% 0.035 61.9)",
+          "oklch(95% 0.035 61.9)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Night Roast Ink",
+        "canonical": "oklch(19.1% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(60% 0.000 89.9)",
+          "oklch(72% 0.000 89.9)",
+          "oklch(84% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "charcoal": {
+        "role": "neutral",
+        "displayName": "Charcoal Hopper",
+        "canonical": "oklch(28.5% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(60% 0.000 89.9)",
+          "oklch(72% 0.000 89.9)",
+          "oklch(84% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Grinder Steel",
+        "canonical": "oklch(34.8% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(60% 0.000 89.9)",
+          "oklch(72% 0.000 89.9)",
+          "oklch(84% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Burr Grey",
+        "canonical": "oklch(40.9% 0.000 89.9)",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(60% 0.000 89.9)",
+          "oklch(72% 0.000 89.9)",
+          "oklch(84% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Steamed Milk Cream",
+        "canonical": "oklch(94.6% 0.017 76.1)",
+        "tonalRamp": [
+          "oklch(15% 0.017 76.1)",
+          "oklch(26% 0.017 76.1)",
+          "oklch(37% 0.017 76.1)",
+          "oklch(48% 0.017 76.1)",
+          "oklch(60% 0.017 76.1)",
+          "oklch(72% 0.017 76.1)",
+          "oklch(84% 0.017 76.1)",
+          "oklch(95% 0.017 76.1)"
+        ]
+      },
+      "cream-dim": {
+        "role": "neutral",
+        "displayName": "Faded Cream",
+        "canonical": "oklch(89.9% 0.021 74.6)",
+        "tonalRamp": [
+          "oklch(15% 0.021 74.6)",
+          "oklch(26% 0.021 74.6)",
+          "oklch(37% 0.021 74.6)",
+          "oklch(48% 0.021 74.6)",
+          "oklch(60% 0.021 74.6)",
+          "oklch(72% 0.021 74.6)",
+          "oklch(84% 0.021 74.6)",
+          "oklch(95% 0.021 74.6)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper Filter",
+        "canonical": "oklch(98.7% 0.011 76.6)",
+        "tonalRamp": [
+          "oklch(15% 0.011 76.6)",
+          "oklch(26% 0.011 76.6)",
+          "oklch(37% 0.011 76.6)",
+          "oklch(48% 0.011 76.6)",
+          "oklch(60% 0.011 76.6)",
+          "oklch(72% 0.011 76.6)",
+          "oklch(84% 0.011 76.6)",
+          "oklch(95% 0.011 76.6)"
+        ]
+      },
+      "oat": {
+        "role": "neutral",
+        "displayName": "Oat Milk",
+        "canonical": "oklch(92.1% 0.026 76.8)",
+        "tonalRamp": [
+          "oklch(15% 0.026 76.8)",
+          "oklch(26% 0.026 76.8)",
+          "oklch(37% 0.026 76.8)",
+          "oklch(48% 0.026 76.8)",
+          "oklch(60% 0.026 76.8)",
+          "oklch(72% 0.026 76.8)",
+          "oklch(84% 0.026 76.8)",
+          "oklch(95% 0.026 76.8)"
+        ]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Burlap Sand",
+        "canonical": "oklch(89.1% 0.028 76.2)",
+        "tonalRamp": [
+          "oklch(15% 0.028 76.2)",
+          "oklch(26% 0.028 76.2)",
+          "oklch(37% 0.028 76.2)",
+          "oklch(48% 0.028 76.2)",
+          "oklch(60% 0.028 76.2)",
+          "oklch(72% 0.028 76.2)",
+          "oklch(84% 0.028 76.2)",
+          "oklch(95% 0.028 76.2)"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Foam",
+        "canonical": "oklch(85.9% 0.021 74.6)",
+        "tonalRamp": [
+          "oklch(15% 0.021 74.6)",
+          "oklch(26% 0.021 74.6)",
+          "oklch(37% 0.021 74.6)",
+          "oklch(48% 0.021 74.6)",
+          "oklch(60% 0.021 74.6)",
+          "oklch(72% 0.021 74.6)",
+          "oklch(84% 0.021 74.6)",
+          "oklch(95% 0.021 74.6)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Ash",
+        "canonical": "oklch(77.5% 0.023 74.0)",
+        "tonalRamp": [
+          "oklch(15% 0.023 74.0)",
+          "oklch(26% 0.023 74.0)",
+          "oklch(37% 0.023 74.0)",
+          "oklch(48% 0.023 74.0)",
+          "oklch(60% 0.023 74.0)",
+          "oklch(72% 0.023 74.0)",
+          "oklch(84% 0.023 74.0)",
+          "oklch(95% 0.023 74.0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only; optional 500-italic caramel accent phrase."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2 via heading-2 utility."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Product and brew-method names."
+      },
+      "quote": {
+        "displayName": "Quote",
+        "purpose": "Testimonials and Story pull-quote; serif numerals."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Section ledes and story copy, max ~30em."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Card, FAQ, step and footer copy."
+      },
+      "label": {
+        "displayName": "Eyebrow",
+        "purpose": "Uppercase opener above every H2."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "color-shift",
+        "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Only motion in the system: color/background/border transitions on hover and selection."
+      },
+      {
+        "name": "smooth-scroll",
+        "value": "scroll-behavior: smooth",
+        "purpose": "Anchor navigation between sections."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "intrinsic",
+        "value": "none — auto-fit grids with minmax(min(100%, 220–440px), 1fr)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Single crema pill CTA; caramel on hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Comprar café</a>",
+      "css": ".ds-btn-primary{display:inline-block;border-radius:9999px;background:var(--color-crema);color:var(--color-ink);font-family:'DM Sans',ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:16px;padding:16px 30px;text-decoration:none;transition:background-color 150ms cubic-bezier(0.4,0,0.2,1);}.ds-btn-primary:hover{background:var(--color-caramel);}.ds-btn-primary:focus-visible{outline:2px solid var(--color-caramel);outline-offset:3px;}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary pill on dark; border warms to crema on hover.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Llamar</a>",
+      "css": ".ds-btn-ghost{display:inline-block;border-radius:9999px;border:1px solid #4a4a4a;background:transparent;color:var(--color-cream);font-family:'DM Sans',ui-sans-serif,system-ui,sans-serif;font-size:16px;padding:15px 26px;text-decoration:none;transition:border-color 150ms cubic-bezier(0.4,0,0.2,1);}.ds-btn-ghost:hover{border-color:var(--color-crema);}.ds-btn-ghost:focus-visible{outline:2px solid var(--color-caramel);outline-offset:3px;}"
+    },
+    {
+      "name": "Underline Link CTA",
+      "kind": "button",
+      "refersTo": "button-link",
+      "description": "Text-only secondary CTA with warm underline.",
+      "html": "<a class=\"ds-link-cta\" href=\"#\">Conoce la suscripción</a>",
+      "css": ".ds-link-cta{display:inline-block;color:var(--color-cream);font-family:'DM Sans',ui-sans-serif,system-ui,sans-serif;font-size:16px;padding:16px 8px;border-bottom:1px solid var(--color-crema);text-decoration:none;transition:color 150ms cubic-bezier(0.4,0,0.2,1);}.ds-link-cta:hover{color:var(--color-caramel);}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": "nav-header",
+      "description": "Sticky ink bar with blur, serif wordmark, cream links, small crema CTA.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-logo\" href=\"#\"><span class=\"ds-nav-mark\"><span></span></span>Crema &amp; Nogal</a><nav class=\"ds-nav-links\"><a href=\"#\">Cafés</a><a href=\"#\">Suscripción</a><a href=\"#\">Origen</a><a class=\"ds-nav-cta\" href=\"#\">Pedir café</a></nav></header>",
+      "css": ".ds-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;padding:18px 32px;background:rgb(20 20 20 / .92);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-charcoal);font-family:'DM Sans',ui-sans-serif,system-ui,sans-serif;}.ds-nav-logo{display:flex;align-items:center;gap:10px;color:var(--color-cream);text-decoration:none;font-family:'Playfair Display',ui-serif,Georgia,serif;font-weight:600;font-size:22px;}.ds-nav-mark{display:flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:50%;background:var(--color-crema);}.ds-nav-mark span{width:12px;height:18px;border:2px solid var(--color-ink);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;}.ds-nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;}.ds-nav-links a{color:var(--color-cream);text-decoration:none;transition:color 150ms;}.ds-nav-links a:hover{color:var(--color-caramel);}.ds-nav-links a.ds-nav-cta{background:var(--color-crema);color:var(--color-ink);border-radius:9999px;padding:10px 20px;font-size:14px;font-weight:600;}.ds-nav-links a.ds-nav-cta:hover{background:var(--color-caramel);color:var(--color-ink);}"
+    },
+    {
+      "name": "Tasting Note Chips",
+      "kind": "chip",
+      "refersTo": "chip-note",
+      "description": "Oat pills listing cupping notes on product cards.",
+      "html": "<ul class=\"ds-chips\"><li>Chocolate</li><li>Nuez</li><li>Panela</li></ul>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;font-family:'DM Sans',ui-sans-serif,system-ui,sans-serif;}.ds-chips li{background:var(--color-oat);color:var(--color-bean);border-radius:9999px;padding:5px 12px;font-size:13px;}"
+    },
+    {
+      "name": "Option Pills",
+      "kind": "chip",
+      "refersTo": "option-pill",
+      "description": "Single-select radio pills; selected fills crema.",
+      "html": "<div class=\"ds-options\" role=\"radiogroup\"><button role=\"radio\" aria-checked=\"false\">Cada semana</button><button role=\"radio\" aria-checked=\"true\">Cada 2 semanas</button><button role=\"radio\" aria-checked=\"false\">Cada mes</button></div>",
+      "css": ".ds-options{display:flex;flex-wrap:wrap;gap:10px;padding:24px;background:var(--color-charcoal);border-radius:28px;}.ds-options button{flex:1;min-width:120px;cursor:pointer;border-radius:14px;border:1px solid #4a4a4a;background:transparent;color:var(--color-cream);padding:14px 16px;font:600 15px 'DM Sans',ui-sans-serif,system-ui,sans-serif;transition:background-color 150ms,border-color 150ms,color 150ms;}.ds-options button:hover{border-color:var(--color-crema);}.ds-options button[aria-checked=true]{background:var(--color-crema);border-color:var(--color-crema);color:var(--color-ink);}.ds-options button:focus-visible{outline:2px solid var(--color-caramel);outline-offset:2px;}"
+    },
+    {
+      "name": "Method Tabs",
+      "kind": "custom",
+      "refersTo": "tab",
+      "description": "Segmented pill track on cream; selected tab fills bean.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button role=\"tab\" aria-selected=\"true\">Espresso</button><button role=\"tab\" aria-selected=\"false\">V60</button><button role=\"tab\" aria-selected=\"false\">Prensa francesa</button></div>",
+      "css": ".ds-tabs{display:inline-flex;flex-wrap:wrap;gap:8px;padding:6px;border-radius:9999px;background:#e9dccb;}.ds-tabs button{cursor:pointer;border:0;border-radius:9999px;background:transparent;color:var(--color-bean);padding:11px 20px;font:600 15px 'DM Sans',ui-sans-serif,system-ui,sans-serif;transition:background-color 150ms,color 150ms;}.ds-tabs button[aria-selected=true]{background:var(--color-bean);color:var(--color-cream);}.ds-tabs button:focus-visible{outline:2px solid var(--color-roast);outline-offset:2px;}"
+    },
+    {
+      "name": "Newsletter Input",
+      "kind": "input",
+      "refersTo": "input-pill",
+      "description": "Bean pill field on roast band; border warms to caramel on focus.",
+      "html": "<form class=\"ds-news\"><input type=\"email\" placeholder=\"tu@correo.com\" aria-label=\"Correo\"><button type=\"submit\">Quiero mi código</button></form>",
+      "css": ".ds-news{display:flex;flex-wrap:wrap;gap:10px;padding:32px;background:var(--color-roast);border-radius:28px;font-family:'DM Sans',ui-sans-serif,system-ui,sans-serif;}.ds-news input{flex:1;min-width:220px;border-radius:9999px;border:1px solid #8a5c3c;background:var(--color-bean);color:var(--color-cream);padding:15px 22px;font-size:16px;outline:none;transition:border-color 150ms;}.ds-news input::placeholder{color:#bfa58a;}.ds-news input:focus{border-color:var(--color-caramel);}.ds-news button{cursor:pointer;border:0;border-radius:9999px;background:var(--color-crema);color:var(--color-ink);padding:15px 28px;font-size:16px;font-weight:600;transition:background-color 150ms;}.ds-news button:hover{background:var(--color-caramel);}"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "card-product",
+      "description": "Paper card with origin tag, notes, roast meter, price and CTA.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-img\"><span>Colombia · Huila</span></div><div class=\"ds-card-body\"><h3>Finca La Esperanza</h3><span class=\"ds-card-proc\">Lavado · 1,800 m</span><ul class=\"ds-card-notes\"><li>Panela</li><li>Cacao</li></ul><div class=\"ds-card-roast\"><div><span>Tostado</span><b>Medio</b></div><i><s style=\"width:60%\"></s></i></div><div class=\"ds-card-foot\"><strong>$19 USD</strong><a href=\"#\">Lo quiero</a></div></div></article>",
+      "css": ".ds-card{max-width:340px;display:flex;flex-direction:column;overflow:hidden;border-radius:22px;border:1px solid var(--color-sand);background:var(--color-paper);font-family:'DM Sans',ui-sans-serif,system-ui,sans-serif;color:var(--color-ink);}.ds-card-img{position:relative;aspect-ratio:4/3;background:var(--color-bean) repeating-linear-gradient(135deg,rgb(255 255 255/.035) 0 12px,transparent 12px 24px);}.ds-card-img span{position:absolute;top:14px;left:14px;background:var(--color-ink);color:var(--color-cream);border-radius:9999px;padding:6px 12px;font-size:12px;letter-spacing:.06em;}.ds-card-body{display:flex;flex-direction:column;gap:16px;padding:24px 24px 26px;}.ds-card-body h3{margin:0;font:600 26px/1.15 'Playfair Display',ui-serif,Georgia,serif;}.ds-card-proc{margin-top:-10px;font-size:14px;color:var(--color-mocha);}.ds-card-notes{display:flex;gap:8px;list-style:none;margin:0;padding:0;}.ds-card-notes li{background:var(--color-oat);color:var(--color-bean);border-radius:9999px;padding:5px 12px;font-size:13px;}.ds-card-roast div{display:flex;justify-content:space-between;font-size:13px;color:var(--color-mocha);margin-bottom:8px;}.ds-card-roast b{color:var(--color-bean);}.ds-card-roast i{display:block;height:6px;border-radius:9999px;background:var(--color-sand);overflow:hidden;}.ds-card-roast s{display:block;height:100%;border-radius:9999px;background:linear-gradient(to right,var(--color-caramel),var(--color-roast));}.ds-card-foot{display:flex;align-items:center;justify-content:space-between;}.ds-card-foot strong{font-size:24px;color:var(--color-bean);}.ds-card-foot a{border-radius:9999px;background:var(--color-crema);color:var(--color-ink);padding:13px 22px;font-size:15px;font-weight:600;text-decoration:none;transition:background-color 150ms;}.ds-card-foot a:hover{background:var(--color-caramel);}"
+    },
+    {
+      "name": "Section Header",
+      "kind": "custom",
+      "refersTo": "section-header",
+      "description": "Eyebrow-then-serif opener used by every section.",
+      "html": "<div class=\"ds-sh\"><span>Tueste de esta semana</span><h2>Nuestros cafés destacados</h2></div>",
+      "css": ".ds-sh{display:flex;flex-direction:column;gap:14px;max-width:560px;padding:32px;background:var(--color-ink);color:var(--color-cream);}.ds-sh span{font:13px 'DM Sans',ui-sans-serif,system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--color-caramel);}.ds-sh h2{margin:0;font:600 clamp(34px,4vw,52px)/1.08 'Playfair Display',ui-serif,Georgia,serif;text-wrap:balance;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Roastery at Dusk",
+    "overview": "**Creative North Star: \"The Roastery at Dusk\"**\n\nThe page is a roastery after hours: a near-black room (ink, charcoal, bean) lit by one warm source, the amber of fresh crema. Against that dark, the brand speaks in a confident editorial serif and lets copy breathe. Periodically the visitor steps into daylight: cream and paper sections where the practical work happens (choosing a bag, learning a recipe, reading the FAQ). That dark/light alternation is the system's pulse; every section is one or the other, never a blend.\n\nThe mood is warm, dark and editorial. Density is generous: sections pad out to 112px, headlines balance across lines, body copy caps at ~30em. Expression lives in type, warm tone and soft geometry, not in ornament, imagery tricks or effects. The world is flat: depth is a change of surface tone, never a shadow.\n\nConfirmed rejections: chain-café green and kraft-paper/chalkboard clichés; generic SaaS styling (drop-shadow cards, decorative gradients, blue CTAs, glassmorphism); rustic farmhouse kitsch (burlap, wood textures, bean doodles, script fonts).",
+    "keyCharacteristics": [
+      "Dark-first canvas (ink) with crema as the single warm light source.",
+      "Strict section alternation between dark rooms and cream daylight.",
+      "Playfair Display for voice, DM Sans for everything functional.",
+      "Flat surfaces; depth by tonal stepping and hairline borders.",
+      "Soft, confident geometry: full pills for actions, 22–28px radii for containers."
+    ],
+    "rules": [
+      {
+        "name": "The One Light Rule",
+        "body": "Crema/caramel are the only saturated fills on dark sections. One crema button per cluster; everything else in the cluster is ghost or underline.",
+        "section": "colors"
+      },
+      {
+        "name": "The Daylight Rule",
+        "body": "Light sections use cream as the floor and paper for contained surfaces; text flips to ink/bean/mocha and eyebrows flip from caramel to roast (semibold). Never put crema text on cream.",
+        "section": "colors"
+      },
+      {
+        "name": "The Eyebrow-Then-Serif Rule",
+        "body": "Every section opens with an uppercase sans eyebrow, then a serif headline, stacked with a 14px gap. Don't skip the eyebrow; don't set it in serif.",
+        "section": "typography"
+      },
+      {
+        "name": "The Serif Numeral Rule",
+        "body": "Ordinals and counts that structure content (01/02/03, step 1/2/3, price total) are set in Playfair, colored crema on dark. Inline UI numbers (chip counts, step discs on cream) stay sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal Step Rule",
+        "body": "To raise a surface, change its tone one step (ink→charcoal, cream→paper) and, on light, add a sand hairline. Never add a shadow, glow or gradient to signal elevation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do alternate dark (ink/charcoal/bean) and light (cream) sections; every section commits to one.",
+      "Do use crema as the single warm accent on dark, with caramel for hover and highlight.",
+      "Do open every section with an uppercase eyebrow (13px, 0.18em) followed by a Playfair headline.",
+      "Do build elevation from tone steps and 1px hairlines (sand on light, charcoal/line on dark).",
+      "Do use full pills for actions and tags, and 22–28px radii for containers.",
+      "Do keep grids intrinsic with `auto-fit` + `minmax(min(100%, N), 1fr)` instead of breakpoints.",
+      "Do promote the recurring hard-coded values (`#4a4a4a`, `#e6dccf`, `#6b5848`) to `@theme` tokens before reusing them."
+    ],
+    "donts": [
+      "Don't add box-shadows, glows, glassmorphism (beyond the header blur) or decorative gradients; the roast-meter fill and hero scrim are the only gradients.",
+      "Don't introduce green, kraft-paper or chalkboard textures, or any chain-café cliché.",
+      "Don't use rustic farmhouse kitsch: burlap, wood grain, hand-drawn bean doodles, script fonts.",
+      "Don't use blue or any cool hue for CTAs or links.",
+      "Don't put more than one crema-filled button in a CTA cluster.",
+      "Don't use crema or caramel text on cream/paper; use roast or bean.",
+      "Don't introduce sharp-cornered cards or square buttons."
+    ]
+  }
+}

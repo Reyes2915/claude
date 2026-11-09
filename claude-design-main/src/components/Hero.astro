@@ -1,0 +1,30 @@
+---
+import HeroCopy from './HeroCopy.astro';
+import ImageSlot from './ImageSlot.astro';
+import { landing } from '../config/site';
+
+const photo = 'Foto del cliente: taza con latte art sobre madera';
+---
+
+{
+  landing.heroLayout === 'split' ? (
+    <section class="container-page grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] items-center gap-[clamp(40px,6vw,80px)] pt-[clamp(40px,6vw,88px)] pb-[clamp(64px,8vw,112px)]">
+      <div class="flex flex-col gap-8">
+        <HeroCopy variant="split" />
+      </div>
+      <div class="relative aspect-4/5 max-h-[680px] w-full overflow-hidden rounded-[28px]">
+        <ImageSlot placeholder={photo} loading="eager" />
+      </div>
+    </section>
+  ) : (
+    <section class="relative flex min-h-[min(88vh,860px)] items-end overflow-hidden">
+      <ImageSlot placeholder={photo} loading="eager" />
+      <div class="pointer-events-none absolute inset-0 bg-linear-to-r from-ink/92 via-ink/60 via-45% to-transparent to-75%" />
+      <div class="container-page relative w-full py-[clamp(48px,7vw,104px)]">
+        <div class="flex max-w-[620px] flex-col gap-7">
+          <HeroCopy variant="fullbleed" />
+        </div>
+      </div>
+    </section>
+  )
+}

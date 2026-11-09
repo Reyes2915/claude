@@ -1,0 +1,44 @@
+---
+import { landing } from '../config/site';
+
+interface Props {
+  variant: 'split' | 'fullbleed';
+}
+
+const { variant } = Astro.props;
+const isSubscribe = landing.ctaMode === 'Suscribirme';
+const ctaPrimary = isSubscribe ? 'Suscribirme' : 'Comprar café';
+const ctaSecondary = isSubscribe ? 'Ver los cafés' : 'Conoce la suscripción';
+const primaryHref = isSubscribe ? '#suscripcion' : '#cafes';
+const secondaryHref = isSubscribe ? '#cafes' : '#suscripcion';
+---
+
+<h1
+  class:list={[
+    'm-0 font-serif leading-[0.98] font-medium tracking-[-.03em] text-balance',
+    variant === 'split' ? 'text-[clamp(48px,6.4vw,92px)]' : 'text-[clamp(48px,6.4vw,96px)]',
+  ]}
+>
+  El café que merece <em class="font-light tracking-[-.02em] text-caramel">tu mañana</em>.
+</h1>
+<p
+  class:list={[
+    'm-0 max-w-[30em] text-[clamp(17px,1.4vw,19px)] leading-relaxed text-pretty',
+    variant === 'split' ? 'text-soft' : 'text-cream-dim',
+  ]}
+>
+  Granos de origen único, tostados cada semana y enviados gratis a tu puerta en menos de siete
+  días desde el tueste.
+</p>
+<div class="flex flex-wrap items-center gap-x-8 gap-y-4">
+  <a href={primaryHref} class="btn-primary px-[30px] py-4 text-base">{ctaPrimary}</a>
+  <a
+    href={secondaryHref}
+    class:list={[
+      'border-b py-1 text-base text-cream transition-colors duration-200 hover:border-caramel hover:text-caramel',
+      variant === 'split' ? 'border-roast' : 'border-crema',
+    ]}
+  >
+    {ctaSecondary}
+  </a>
+</div>

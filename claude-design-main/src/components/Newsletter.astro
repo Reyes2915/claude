@@ -1,0 +1,38 @@
+---
+import { site } from '../config/site';
+---
+
+<section class="bg-roast" aria-label="Boletín" data-newsletter>
+  <div
+    class="mx-auto flex max-w-[960px] flex-col items-center gap-6 px-[clamp(20px,4vw,48px)] py-[clamp(64px,8vw,104px)] text-center"
+  >
+    <h2 class="m-0 font-serif text-[clamp(38px,5.4vw,68px)] leading-none font-medium tracking-[-.025em] text-balance">
+      10% de descuento en tu primera bolsa
+    </h2>
+    <p class="m-0 max-w-[32em] text-[17px] leading-relaxed text-cream">
+      Suscríbete al boletín y recibe el código, además de aviso cuando salga un lote nuevo.
+    </p>
+    <form class="mt-2 flex w-full max-w-[520px] flex-wrap justify-center gap-2.5" data-newsletter-form>
+      <input
+        type="email"
+        name="email"
+        required
+        placeholder="tu@correo.com"
+        aria-label="Correo electrónico"
+        class="min-w-[220px] flex-1 rounded-full border border-[#8a5c3c] bg-bean px-[22px] py-[15px] text-base text-cream outline-none transition-colors duration-200 hover:border-[#a8774f] focus-visible:border-caramel"
+      />
+      <button type="submit" class="btn-primary cursor-pointer border-0 px-7 py-[15px] text-base">
+        Quiero mi código
+      </button>
+    </form>
+    <div class="mt-2 rounded-full bg-bean px-7 py-[15px] text-base" role="status" hidden data-newsletter-success>
+      ¡Listo! Revisa tu correo: tu código es{' '}
+      <strong class="inline-block tracking-[.06em] text-caramel" data-newsletter-code>{site.newsletterCode}</strong>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initNewsletter } from '../scripts/newsletter';
+  initNewsletter();
+</script>

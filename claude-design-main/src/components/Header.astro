@@ -1,0 +1,23 @@
+---
+import Logo from './Logo.astro';
+import { navLinks } from '../config/site';
+---
+
+<header class="sticky top-0 z-20 border-b border-charcoal bg-ink/92 backdrop-blur-md">
+  <div class="container-page flex flex-wrap items-center gap-x-[clamp(16px,2.5vw,32px)] py-3.5 md:py-[18px]">
+    <Logo />
+    <a href="#cafes" class="btn-primary order-2 ml-auto px-5 py-2.5 text-sm md:order-3 md:ml-0">Pedir café</a>
+    <nav
+      class="order-3 -mx-[clamp(20px,4vw,48px)] flex w-[calc(100%+2*clamp(20px,4vw,48px))] gap-6 overflow-x-auto px-[clamp(20px,4vw,48px)] pt-3 text-[15px] [scrollbar-width:none] md:order-2 md:mx-0 md:ml-auto md:w-auto md:gap-[clamp(16px,2.5vw,32px)] md:overflow-visible md:px-0 md:pt-0"
+      aria-label="Principal"
+    >
+      {
+        navLinks.map((link) => (
+          <a href={link.href} class="link-draw shrink-0 text-cream hover:text-caramel">
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
